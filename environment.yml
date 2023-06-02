@@ -1,0 +1,7 @@
+name: c4il
+channels:
+  - conda
+  - conda-forge
+dependencies:
+  - python=3.8
+  - numpy
