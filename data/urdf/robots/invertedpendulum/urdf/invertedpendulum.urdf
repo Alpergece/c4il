@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+
+
+<!--a single link pendulum with a hinge joint at the base. The pendulum is assumed to be actuated at the base.
+The pendulum is modeled as a cylinder with a length of 1.0 and a radius of 0.05. 
+The base is modeled as a box of size 0.1 x 0.1 x 0.1. 
+-->
+<robot name="inverted_pendulum">
+
+  <!-- Properties of the base -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Properties of the pendulum -->
+  <link name="pendulum_link">
+    <inertial>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </collision>    
+  </link>
+
+  <!-- Joint properties -->
+  <joint name="pendulum_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="pendulum_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit effort="1000.0" velocity="10.0"/> <!-- add this line -->
+  </joint>
+
+</robot>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<robot name="double_inverted_pendulum">
+
+  <!-- Properties of the base -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Properties of the first pendulum -->
+  <link name="pendulum_link1">
+    <inertial>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint properties for the first pendulum -->
+  <joint name="pendulum_joint1" type="continuous">
+    <parent link="base_link"/>
+    <child link="pendulum_link1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit effort="1000.0" velocity="10.0"/> <!-- add limit attribute here -->
+  </joint>
+
+  <!-- Properties of the second pendulum -->
+  <link name="pendulum_link2">
+    <inertial>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+      <geometry>
+        <cylinder length="1.0" radius="0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Joint properties for the second pendulum -->
+  <joint name="pendulum_joint2" type="continuous">
+    <parent link="pendulum_link1"/>
+    <child link="pendulum_link2"/>
+    <origin xyz="0 0 -1.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit effort="1000.0" velocity="10.0"/> <!-- add limit attribute here -->
+  </joint>
+
+</robot>
