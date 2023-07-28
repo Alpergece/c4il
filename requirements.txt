@@ -1,0 +1,14 @@
+scipy
+numpy
+matplotlib
+scikit-learn
+gymnasium
+gymnasium[mujoco]
+gymnasium[classic_control]
+seals
+trimesh
+pyglet
+seals
+torchrl
+pygmtools
+moviepy
