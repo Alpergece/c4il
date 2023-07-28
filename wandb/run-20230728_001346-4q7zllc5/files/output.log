@@ -1,0 +1,98 @@
+normalization constant shape: torch.Size([11])
+observation_spec: CompositeSpec(
+    observation: UnboundedContinuousTensorSpec(
+         shape=torch.Size([11]), space=None, device=cuda:0, dtype=torch.float32, domain=continuous),
+    step_count: UnboundedDiscreteTensorSpec(
+         shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, contiguous=True), maximum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, contiguous=True)), device=cuda:0, dtype=torch.int64, domain=continuous), device=cuda:0, shape=torch.Size([]))
+reward_spec: UnboundedContinuousTensorSpec(
+     shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, contiguous=True), maximum=Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, contiguous=True)), device=cuda:0, dtype=torch.float32, domain=continuous)
+done_spec: DiscreteTensorSpec(
+     shape=torch.Size([1]), space=DiscreteBox(n=2), device=cuda:0, dtype=torch.bool, domain=discrete)
+action_spec: BoundedTensorSpec(
+     shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, contiguous=True), maximum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, contiguous=True)), device=cuda:0, dtype=torch.float32, domain=continuous)
+check_env_specs succeeded!
+rollout of three steps: TensorDict(
+    fields={
+        action: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        done: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        next: TensorDict(
+            fields={
+                done: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+                observation: Tensor(shape=torch.Size([3, 11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+                reward: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+                step_count: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+            batch_size=torch.Size([3]),
+            device=cuda:0,
+            is_shared=True),
+        observation: Tensor(shape=torch.Size([3, 11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([3]),
+    device=cuda:0,
+    is_shared=True)
+Shape of the rollout TensorDict: torch.Size([3])
+Running policy: TensorDict(
+    fields={
+        action: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        done: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        loc: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        observation: Tensor(shape=torch.Size([11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        reward: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        sample_log_prob: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        scale: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([]),
+    device=cuda:0,
+    is_shared=True)
+Running value: TensorDict(
+    fields={
+        done: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        observation: Tensor(shape=torch.Size([11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        reward: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        state_value: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([]),
+    device=cuda:0,
+    is_shared=True)
+/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+
+
+
+eval cumulative reward:  0.0084 (init:  0.0084), eval step-count: 9, average reward= 0.0040 (init= 0.0025), step count (max): 13, lr policy:  0.0003:  30%|▎| 3000/10000 [00:33<01:18,Traceback (most recent call last):
+  File "/home/alper/c4il/scripts/train_irl.py", line 210, in <module>
+    for i, tensordict_data in enumerate(collector):
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/collectors/collectors.py", line 731, in iterator
+    tensordict_out = self.rollout()
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/_utils.py", line 361, in unpack_rref_and_invoke_function
+    return func(self, *args, **kwargs)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/collectors/collectors.py", line 826, in rollout
+    self.env.step(self._tensordict)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/envs/common.py", line 378, in step
+    tensordict_out = self._step(tensordict)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/envs/transforms/transforms.py", line 586, in _step
+    tensordict_out = self.transform._step(tensordict_out)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/envs/transforms/transforms.py", line 791, in _step
+    tensordict = t._step(tensordict)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/envs/transforms/transforms.py", line 229, in _step
+    next_tensordict = self._call(next_tensordict)
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torchrl/envs/transforms/transforms.py", line 190, in _call
+    observation = self._apply_transform(tensordict.get(in_key))
+  File "/home/alper/c4il/scripts/train_irl.py", line 47, in _apply_transform
+    return self.reward_fn(self.q1, q2)
+  File "/home/alper/c4il/scripts/train_irl.py", line 57, in <lambda>
+    reward = lambda _q1, _q2: torch.exp(-compute_total_distance(Xd, _q1, _q2, invert_pendulum, double_invert_pendulum))
+  File "/home/alper/c4il/c4il/algorithms/graph_matching.py", line 64, in compute_total_distance
+    distances = compute_distances(Xd, q1, q2, kinematic_tree1, kinematic_tree2)
+  File "/home/alper/c4il/c4il/algorithms/graph_matching.py", line 50, in compute_distances
+    pose_list2 = kinematic_tree2.compute_forward_kinematics_all_links(q2)
+  File "/home/alper/torch_robotics/torch_kinematics_tree/models/robot_tree.py", line 201, in compute_forward_kinematics_all_links
+    pose_dict = self._bodies[0].forward_kinematics(q_dict, batch_size)
+  File "/home/alper/torch_robotics/torch_kinematics_tree/models/rigid_body.py", line 205, in forward_kinematics
+    result[body_name] = joint_pose.multiply_transform(pose_dict[body_name])
+  File "/home/alper/torch_robotics/torch_kinematics_tree/geometrics/frame.py", line 69, in multiply_transform
+    return Frame(new_rot, new_trans, device=self.device)
+  File "/home/alper/torch_robotics/torch_kinematics_tree/geometrics/frame.py", line 26, in __init__
+    self._rot = rot.to(device)
+KeyboardInterrupt

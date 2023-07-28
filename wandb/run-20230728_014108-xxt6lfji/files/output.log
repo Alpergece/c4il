@@ -1,0 +1,73 @@
+normalization constant shape: torch.Size([11])
+observation_spec: CompositeSpec(
+    observation: UnboundedContinuousTensorSpec(
+         shape=torch.Size([11]), space=None, device=cuda:0, dtype=torch.float32, domain=continuous),
+    step_count: UnboundedDiscreteTensorSpec(
+         shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, contiguous=True), maximum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, contiguous=True)), device=cuda:0, dtype=torch.int64, domain=continuous), device=cuda:0, shape=torch.Size([]))
+reward_spec: UnboundedContinuousTensorSpec(
+     shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, contiguous=True), maximum=Tensor(shape=torch.Size([]), device=cpu, dtype=torch.float32, contiguous=True)), device=cuda:0, dtype=torch.float32, domain=continuous)
+done_spec: DiscreteTensorSpec(
+     shape=torch.Size([1]), space=DiscreteBox(n=2), device=cuda:0, dtype=torch.bool, domain=discrete)
+action_spec: BoundedTensorSpec(
+     shape=torch.Size([1]), space=ContinuousBox(minimum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, contiguous=True), maximum=Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, contiguous=True)), device=cuda:0, dtype=torch.float32, domain=continuous)
+check_env_specs succeeded!
+rollout of three steps: TensorDict(
+    fields={
+        action: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        done: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        next: TensorDict(
+            fields={
+                done: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+                observation: Tensor(shape=torch.Size([3, 11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+                reward: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+                step_count: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+            batch_size=torch.Size([3]),
+            device=cuda:0,
+            is_shared=True),
+        observation: Tensor(shape=torch.Size([3, 11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([3, 1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([3]),
+    device=cuda:0,
+    is_shared=True)
+Shape of the rollout TensorDict: torch.Size([3])
+Running policy: TensorDict(
+    fields={
+        action: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        done: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        loc: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        observation: Tensor(shape=torch.Size([11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        reward: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        sample_log_prob: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        scale: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([]),
+    device=cuda:0,
+    is_shared=True)
+Running value: TensorDict(
+    fields={
+        done: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.bool, is_shared=True),
+        observation: Tensor(shape=torch.Size([11]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        reward: Tensor(shape=torch.Size([]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        state_value: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.float32, is_shared=True),
+        step_count: Tensor(shape=torch.Size([1]), device=cuda:0, dtype=torch.int64, is_shared=True)},
+    batch_size=torch.Size([]),
+    device=cuda:0,
+    is_shared=True)
+/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/torch/nn/modules/lazy.py:180: UserWarning: Lazy modules are a new feature under heavy development so changes to the API or functionality can happen at any moment.
+  warnings.warn('Lazy modules are a new feature under heavy development '
+
+
+
+
+
+
+
+
+
+
+eval cumulative reward:  0.1851 (init:  0.1851), eval step-count: 13, average reward= 0.0098 (init= 0.0023), step count (max): 23, lr policy:  0.0000: 100%|█| 10000/10000 [01:49<00:00, 90Traceback (most recent call last):
+  File "/home/alper/c4il/scripts/train_irl.py", line 283, in <module>
+    wandb.log({"video": wandb.Video(video_path, fps=4, format="gif")})
+  File "/home/alper/miniconda3/envs/c4il/lib/python3.8/site-packages/wandb/sdk/data_types/video.py", line 114, in __init__
+    raise ValueError(
+ValueError: wandb.Video accepts gif, mp4, webm, ogg formats

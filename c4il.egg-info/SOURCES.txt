@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+c4il/__init__.py
+c4il.egg-info/PKG-INFO
+c4il.egg-info/SOURCES.txt
+c4il.egg-info/dependency_links.txt
+c4il.egg-info/requires.txt
+c4il.egg-info/top_level.txt

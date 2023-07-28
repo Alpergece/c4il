@@ -1,0 +1,350 @@
+2023-07-28 01:41:08,196 INFO    StreamThr :13029 [internal.py:wandb_internal():86] W&B internal server running at pid: 13029, started at: 2023-07-28 01:41:08.195867
+2023-07-28 01:41:08,197 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status
+2023-07-28 01:41:08,201 INFO    WriterThread:13029 [datastore.py:open_for_write():85] open: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/run-xxt6lfji.wandb
+2023-07-28 01:41:08,202 DEBUG   SenderThread:13029 [sender.py:send():379] send: header
+2023-07-28 01:41:08,226 DEBUG   SenderThread:13029 [sender.py:send():379] send: run
+2023-07-28 01:41:08,228 INFO    SenderThread:13029 [sender.py:_maybe_setup_resume():758] checking resume status for None/c4il/xxt6lfji
+2023-07-28 01:41:09,117 INFO    SenderThread:13029 [dir_watcher.py:__init__():211] watching files in: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files
+2023-07-28 01:41:09,117 INFO    SenderThread:13029 [sender.py:_start_run_threads():1122] run started: xxt6lfji with start time 1690501268.196002
+2023-07-28 01:41:09,117 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: summary_record
+2023-07-28 01:41:09,117 INFO    SenderThread:13029 [sender.py:_save_file():1376] saving file wandb-summary.json with policy end
+2023-07-28 01:41:09,126 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: check_version
+2023-07-28 01:41:09,126 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: check_version
+2023-07-28 01:41:09,197 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: run_start
+2023-07-28 01:41:09,232 DEBUG   HandlerThread:13029 [system_info.py:__init__():31] System info init
+2023-07-28 01:41:09,232 DEBUG   HandlerThread:13029 [system_info.py:__init__():46] System info init done
+2023-07-28 01:41:09,232 INFO    HandlerThread:13029 [system_monitor.py:start():181] Starting system monitor
+2023-07-28 01:41:09,232 INFO    SystemMonitor:13029 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-07-28 01:41:09,233 INFO    HandlerThread:13029 [system_monitor.py:probe():201] Collecting system info
+2023-07-28 01:41:09,233 INFO    SystemMonitor:13029 [interfaces.py:start():190] Started cpu monitoring
+2023-07-28 01:41:09,233 INFO    SystemMonitor:13029 [interfaces.py:start():190] Started disk monitoring
+2023-07-28 01:41:09,234 INFO    SystemMonitor:13029 [interfaces.py:start():190] Started gpu monitoring
+2023-07-28 01:41:09,234 INFO    SystemMonitor:13029 [interfaces.py:start():190] Started memory monitoring
+2023-07-28 01:41:09,235 INFO    SystemMonitor:13029 [interfaces.py:start():190] Started network monitoring
+2023-07-28 01:41:09,240 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:09,240 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:09,244 DEBUG   HandlerThread:13029 [system_info.py:probe():195] Probing system
+2023-07-28 01:41:09,248 DEBUG   HandlerThread:13029 [system_info.py:_probe_git():180] Probing git
+2023-07-28 01:41:09,260 DEBUG   HandlerThread:13029 [system_info.py:_probe_git():188] Probing git done
+2023-07-28 01:41:09,260 DEBUG   HandlerThread:13029 [system_info.py:probe():240] Probing system done
+2023-07-28 01:41:09,260 DEBUG   HandlerThread:13029 [system_monitor.py:probe():210] {'os': 'Linux-5.4.0-153-generic-x86_64-with-glibc2.10', 'python': '3.8.17', 'heartbeatAt': '2023-07-27T23:41:09.244887', 'startedAt': '2023-07-27T23:41:08.188329', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/alper/c4il/scripts/train_irl.py', 'codePath': 'scripts/train_irl.py', 'git': {'remote': 'https://git.ias.informatik.tu-darmstadt.de/hansel/c4il.git', 'commit': '56af3f995ceb07d7904f1e086c7008cd97939e5a'}, 'email': 'alpergece470@gmail.com', 'root': '/home/alper/c4il', 'host': 'alper-Lenovo-Y50-70', 'username': 'alper', 'executable': '/home/alper/miniconda3/envs/c4il/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2445.124, 'min': 800.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 2791.127, 'min': 800.0, 'max': 3600.0}, {'current': 2073.827, 'min': 800.0, 'max': 3600.0}, {'current': 2571.616, 'min': 800.0, 'max': 3600.0}, {'current': 2527.34, 'min': 800.0, 'max': 3600.0}, {'current': 2581.43, 'min': 800.0, 'max': 3600.0}, {'current': 2592.298, 'min': 800.0, 'max': 3600.0}, {'current': 2035.435, 'min': 800.0, 'max': 3600.0}, {'current': 2387.919, 'min': 800.0, 'max': 3600.0}], 'disk': {'total': 95.72564697265625, 'used': 68.87348556518555}, 'gpu': 'NVIDIA GeForce GTX 960M', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 960M', 'memory_total': 4294967296}], 'memory': {'total': 15.535076141357422}}
+2023-07-28 01:41:09,260 INFO    HandlerThread:13029 [system_monitor.py:probe():211] Finished collecting system info
+2023-07-28 01:41:09,260 INFO    HandlerThread:13029 [system_monitor.py:probe():214] Publishing system info
+2023-07-28 01:41:09,260 DEBUG   HandlerThread:13029 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-07-28 01:41:09,261 DEBUG   HandlerThread:13029 [system_info.py:_save_pip():67] Saving pip packages done
+2023-07-28 01:41:09,261 DEBUG   HandlerThread:13029 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-07-28 01:41:10,118 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_created():272] file/dir created: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-summary.json
+2023-07-28 01:41:10,119 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_created():272] file/dir created: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/requirements.txt
+2023-07-28 01:41:10,119 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_created():272] file/dir created: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/conda-environment.yaml
+2023-07-28 01:41:11,240 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:11,241 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:11,311 DEBUG   HandlerThread:13029 [system_info.py:_save_conda():86] Saving conda packages done
+2023-07-28 01:41:11,311 INFO    HandlerThread:13029 [system_monitor.py:probe():216] Finished publishing system info
+2023-07-28 01:41:11,316 DEBUG   SenderThread:13029 [sender.py:send():379] send: files
+2023-07-28 01:41:11,316 INFO    SenderThread:13029 [sender.py:_save_file():1376] saving file wandb-metadata.json with policy now
+2023-07-28 01:41:11,323 DEBUG   SenderThread:13029 [sender.py:send():379] send: telemetry
+2023-07-28 01:41:11,324 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:41:11,325 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:41:11,975 INFO    wandb-upload_0:13029 [upload_job.py:push():131] Uploaded file /tmp/tmpt8n8y5ulwandb/plfsgtwf-wandb-metadata.json
+2023-07-28 01:41:12,120 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_created():272] file/dir created: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-metadata.json
+2023-07-28 01:41:13,242 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:13,242 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:13,493 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:14,122 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_created():272] file/dir created: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:41:15,243 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:15,243 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:16,122 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:41:17,243 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:17,244 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:18,692 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:19,244 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:19,244 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:21,245 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:21,245 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:23,245 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:23,246 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:23,692 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:25,246 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:25,246 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:26,125 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:41:26,322 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:41:26,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:41:27,247 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:27,247 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:29,247 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:29,248 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:29,616 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:31,248 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:31,248 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:33,249 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:33,249 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:34,617 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:35,250 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:35,250 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:37,251 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:37,251 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:38,128 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:41:39,303 ERROR   gpu       :13029 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-07-28 01:41:39,303 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:39,304 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:39,947 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:41,130 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/config.yaml
+2023-07-28 01:41:41,304 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:41,304 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:41,321 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:41:41,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:41:43,305 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:43,305 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:45,305 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:45,306 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:45,545 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:47,306 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:47,306 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:48,131 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:41:49,307 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:49,307 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:50,854 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:51,307 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:51,308 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:53,308 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:53,308 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:55,309 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:55,309 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:55,854 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:41:56,321 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:41:56,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:41:57,309 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:57,309 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:59,310 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:41:59,310 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:00,135 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:01,311 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:01,311 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:01,508 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:03,311 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:03,311 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:05,312 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:05,312 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:06,509 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:07,313 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:07,313 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:09,236 DEBUG   SystemMonitor:13029 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-07-28 01:42:09,236 DEBUG   SenderThread:13029 [sender.py:send():379] send: stats
+2023-07-28 01:42:09,350 ERROR   gpu       :13029 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-07-28 01:42:09,350 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:09,350 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:10,137 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:11,323 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:42:11,323 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:42:11,351 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:11,351 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:11,672 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:13,351 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:13,352 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:15,352 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:15,352 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:16,673 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:17,353 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:17,353 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:19,353 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:19,354 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:20,140 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:21,354 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:21,354 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:22,611 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:23,355 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:23,355 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:25,355 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:25,355 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:26,322 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:42:26,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:42:27,356 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:27,356 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:28,543 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:29,357 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:29,357 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:30,143 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:31,357 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:31,358 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:33,358 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:33,358 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:34,100 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:35,359 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:35,359 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:37,360 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:37,360 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:39,101 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:39,237 DEBUG   SenderThread:13029 [sender.py:send():379] send: stats
+2023-07-28 01:42:39,420 ERROR   gpu       :13029 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-07-28 01:42:39,420 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:39,421 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:41,322 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:42:41,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:42:41,421 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:41,421 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:42,147 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:43,422 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:43,422 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:44,572 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:45,422 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:45,423 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:47,423 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:47,423 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:49,424 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:49,424 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:49,573 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:51,425 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:51,425 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:53,426 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:53,426 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:54,151 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:42:54,979 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:42:55,426 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:55,426 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:56,322 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: stop_status
+2023-07-28 01:42:56,322 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: stop_status
+2023-07-28 01:42:57,427 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:57,427 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:59,428 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:42:59,428 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:43:00,731 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:43:01,428 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:43:01,429 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:43:03,429 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:43:03,429 ERROR   gpu       :13029 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-07-28 01:43:03,644 DEBUG   SenderThread:13029 [sender.py:send():379] send: exit
+2023-07-28 01:43:03,644 INFO    SenderThread:13029 [sender.py:send_exit():584] handling exit code: 1
+2023-07-28 01:43:03,644 INFO    SenderThread:13029 [sender.py:send_exit():586] handling runtime: 114
+2023-07-28 01:43:03,644 INFO    SenderThread:13029 [sender.py:_save_file():1376] saving file wandb-summary.json with policy end
+2023-07-28 01:43:03,644 INFO    SenderThread:13029 [sender.py:send_exit():592] send defer
+2023-07-28 01:43:03,645 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,645 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 0
+2023-07-28 01:43:03,645 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,645 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-07-28 01:43:03,645 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 1
+2023-07-28 01:43:03,645 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,645 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 1
+2023-07-28 01:43:03,645 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,645 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-07-28 01:43:03,645 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 2
+2023-07-28 01:43:03,645 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,645 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 2
+2023-07-28 01:43:03,646 INFO    HandlerThread:13029 [system_monitor.py:finish():190] Stopping system monitor
+2023-07-28 01:43:03,646 DEBUG   SystemMonitor:13029 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-07-28 01:43:03,646 DEBUG   SystemMonitor:13029 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-07-28 01:43:03,646 INFO    HandlerThread:13029 [interfaces.py:finish():202] Joined cpu monitor
+2023-07-28 01:43:03,647 INFO    HandlerThread:13029 [interfaces.py:finish():202] Joined disk monitor
+2023-07-28 01:43:03,696 ERROR   gpu       :13029 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2023-07-28 01:43:03,696 INFO    HandlerThread:13029 [interfaces.py:finish():202] Joined gpu monitor
+2023-07-28 01:43:03,697 INFO    HandlerThread:13029 [interfaces.py:finish():202] Joined memory monitor
+2023-07-28 01:43:03,697 INFO    HandlerThread:13029 [interfaces.py:finish():202] Joined network monitor
+2023-07-28 01:43:03,698 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,698 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-07-28 01:43:03,698 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 3
+2023-07-28 01:43:03,698 DEBUG   SenderThread:13029 [sender.py:send():379] send: stats
+2023-07-28 01:43:03,698 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,699 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 3
+2023-07-28 01:43:03,699 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,699 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-07-28 01:43:03,699 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 4
+2023-07-28 01:43:03,699 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,699 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 4
+2023-07-28 01:43:03,699 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,699 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-07-28 01:43:03,699 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 5
+2023-07-28 01:43:03,699 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,700 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 5
+2023-07-28 01:43:03,700 DEBUG   SenderThread:13029 [sender.py:send():379] send: summary
+2023-07-28 01:43:03,700 INFO    SenderThread:13029 [sender.py:_save_file():1376] saving file wandb-summary.json with policy end
+2023-07-28 01:43:03,700 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,700 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-07-28 01:43:03,700 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 6
+2023-07-28 01:43:03,701 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,701 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 6
+2023-07-28 01:43:03,701 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,701 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-07-28 01:43:03,701 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 7
+2023-07-28 01:43:03,701 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: status_report
+2023-07-28 01:43:03,701 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:03,701 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 7
+2023-07-28 01:43:03,702 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:03,702 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-07-28 01:43:04,154 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-summary.json
+2023-07-28 01:43:04,155 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:43:04,645 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-28 01:43:05,764 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 8
+2023-07-28 01:43:05,764 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: poll_exit
+2023-07-28 01:43:05,765 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:05,765 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 8
+2023-07-28 01:43:05,766 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:05,766 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-07-28 01:43:05,766 INFO    SenderThread:13029 [job_builder.py:build():280] Attempting to build job artifact
+2023-07-28 01:43:05,767 INFO    SenderThread:13029 [job_builder.py:_get_source_type():389] is repo sourced job
+2023-07-28 01:43:05,770 INFO    SenderThread:13029 [job_builder.py:build():363] adding wandb-job metadata file
+2023-07-28 01:43:05,821 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 9
+2023-07-28 01:43:05,822 DEBUG   SenderThread:13029 [sender.py:send():379] send: artifact
+2023-07-28 01:43:05,822 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:05,826 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 9
+2023-07-28 01:43:06,155 INFO    Thread-12 :13029 [dir_watcher.py:_on_file_modified():289] file/dir modified: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:43:07,179 INFO    SenderThread:13029 [sender.py:send_artifact():1476] sent artifact job-https___git.ias.informatik.tu-darmstadt.de_hansel_c4il.git_scripts_train_irl.py - {'id': 'QXJ0aWZhY3Q6NTI1MjA5MjI2', 'digest': 'fe3f5f8ecb1e3f2d9f75a993793344aa', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___git.ias.informatik.tu-darmstadt.de_hansel_c4il.git_scripts_train_irl.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___git.ias.informatik.tu-darmstadt.de_hansel_c4il.git_scripts_train_irl.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjg2MTcwNzI0', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NTI1MjA5MjI2', 'versionIndex': 0}}, 'version': 'v0'}
+2023-07-28 01:43:07,180 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:07,180 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-07-28 01:43:07,180 INFO    SenderThread:13029 [dir_watcher.py:finish():359] shutting down directory watcher
+2023-07-28 01:43:08,157 INFO    SenderThread:13029 [dir_watcher.py:finish():389] scan: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files
+2023-07-28 01:43:08,158 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log output.log
+2023-07-28 01:43:08,159 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-metadata.json wandb-metadata.json
+2023-07-28 01:43:08,159 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/config.yaml config.yaml
+2023-07-28 01:43:08,164 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-summary.json wandb-summary.json
+2023-07-28 01:43:08,165 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/conda-environment.yaml conda-environment.yaml
+2023-07-28 01:43:08,168 INFO    SenderThread:13029 [dir_watcher.py:finish():403] scan save: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/requirements.txt requirements.txt
+2023-07-28 01:43:08,169 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 10
+2023-07-28 01:43:08,169 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:08,173 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 10
+2023-07-28 01:43:08,178 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:08,178 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-07-28 01:43:08,178 INFO    SenderThread:13029 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-28 01:43:08,714 INFO    wandb-upload_0:13029 [upload_job.py:push():131] Uploaded file /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/output.log
+2023-07-28 01:43:08,720 INFO    wandb-upload_1:13029 [upload_job.py:push():131] Uploaded file /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/config.yaml
+2023-07-28 01:43:08,746 INFO    wandb-upload_2:13029 [upload_job.py:push():131] Uploaded file /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/wandb-summary.json
+2023-07-28 01:43:08,762 INFO    wandb-upload_3:13029 [upload_job.py:push():131] Uploaded file /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/files/requirements.txt
+2023-07-28 01:43:08,963 INFO    Thread-11 :13029 [sender.py:transition_state():612] send defer: 11
+2023-07-28 01:43:08,963 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:08,964 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 11
+2023-07-28 01:43:08,965 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:08,965 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-07-28 01:43:08,965 INFO    SenderThread:13029 [file_pusher.py:join():164] waiting for file pusher
+2023-07-28 01:43:08,965 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 12
+2023-07-28 01:43:08,965 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:08,966 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 12
+2023-07-28 01:43:08,967 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:08,967 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-07-28 01:43:09,648 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: keepalive
+2023-07-28 01:43:09,840 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 13
+2023-07-28 01:43:09,841 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:09,841 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 13
+2023-07-28 01:43:09,841 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:09,842 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-07-28 01:43:09,842 INFO    SenderThread:13029 [sender.py:transition_state():612] send defer: 14
+2023-07-28 01:43:09,842 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: defer
+2023-07-28 01:43:09,843 INFO    HandlerThread:13029 [handler.py:handle_request_defer():170] handle defer: 14
+2023-07-28 01:43:09,844 DEBUG   SenderThread:13029 [sender.py:send():379] send: final
+2023-07-28 01:43:09,844 DEBUG   SenderThread:13029 [sender.py:send():379] send: footer
+2023-07-28 01:43:09,844 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: defer
+2023-07-28 01:43:09,845 INFO    SenderThread:13029 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-07-28 01:43:09,846 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: poll_exit
+2023-07-28 01:43:09,846 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: poll_exit
+2023-07-28 01:43:09,847 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: server_info
+2023-07-28 01:43:09,848 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: server_info
+2023-07-28 01:43:09,854 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: get_summary
+2023-07-28 01:43:09,855 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: sampled_history
+2023-07-28 01:43:09,855 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: job_info
+2023-07-28 01:43:10,042 DEBUG   SenderThread:13029 [sender.py:send_request():406] send_request: job_info
+2023-07-28 01:43:10,043 INFO    MainThread:13029 [wandb_run.py:_footer_history_summary_info():3475] rendering history
+2023-07-28 01:43:10,043 INFO    MainThread:13029 [wandb_run.py:_footer_history_summary_info():3507] rendering summary
+2023-07-28 01:43:10,043 INFO    MainThread:13029 [wandb_run.py:_footer_sync_info():3434] logging synced files
+2023-07-28 01:43:10,044 DEBUG   HandlerThread:13029 [handler.py:handle_request():144] handle_request: shutdown
+2023-07-28 01:43:10,045 INFO    HandlerThread:13029 [handler.py:finish():857] shutting down handler
+2023-07-28 01:43:10,856 INFO    WriterThread:13029 [datastore.py:close():294] close: /home/alper/c4il/wandb/run-20230728_014108-xxt6lfji/run-xxt6lfji.wandb
+2023-07-28 01:43:11,043 INFO    SenderThread:13029 [sender.py:finish():1552] shutting down sender
+2023-07-28 01:43:11,043 INFO    SenderThread:13029 [file_pusher.py:finish():159] shutting down file pusher
+2023-07-28 01:43:11,043 INFO    SenderThread:13029 [file_pusher.py:join():164] waiting for file pusher
