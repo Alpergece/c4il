@@ -1,7 +1,0 @@
-scipy
-numpy
-matplotlib
-scikit-learn
-trimesh==3.9.25
-pyglet==1.5.27
-seals
