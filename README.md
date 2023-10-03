@@ -12,6 +12,7 @@ conda activate c4il && pip install -e .
 ```
 
 Install PyTorch on https://pytorch.org/get-started/locally/
-
+Install torch_robotics
+pip install git+https://github.com/anindex/torch_robotics 
 ## Examples
 
