@@ -1,0 +1,13 @@
+defaults:
+  - experiment: ppo_double_pendulum
+  # - override hydra/hydra_logging: disabled
+  # - override hydra/job_logging: disabled
+  # - override hydra/launcher: joblib
+  - _self_
+
+# wandb configs
+project: c4il
+entity: ias-tudarmstadt
+wandb_path: /home/alper/c4il/
+save_path: /home/alper/c4il/data/weights/weights.pt
+
